@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <p>Help Desk 9000</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/main">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/create">Create a New Ticket</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/bookmark">Bookmark a Ticket</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/resolve">Resolve a Ticket</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/viewBookmark">View All Bookmarked Tickets</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
