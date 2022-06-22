@@ -1,1 +1,27 @@
-<p>main works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="text-center">
+            <h1>Help Desk 9000</h1>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Ticket ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Requested By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <div *ngFor="let ticket of ticketArray">
+        <th scope="row">{{ticket.ticketId}}</th>
+        <td>{{ticket.title}}</td>
+        <td>{{ticket.requestedBy}}</td>
+      </div>
+    </tbody>
+  </table>
+
+
+  

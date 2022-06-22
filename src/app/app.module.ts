@@ -8,6 +8,7 @@ import { CreateTicketComponent } from './components/create-ticket/create-ticket.
 import { ResolveTicketComponent } from './components/resolve-ticket/resolve-ticket.component';
 import { BookmarkTicketComponent } from './components/bookmark-ticket/bookmark-ticket.component';
 import { ViewBookmarksComponent } from './components/view-bookmarks/view-bookmarks.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ViewBookmarksComponent } from './components/view-bookmarks/view-bookmar
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
