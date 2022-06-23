@@ -37,6 +37,6 @@ export class ApiService {
 
   //Bookmark ticket
   BookMarkTicket(bookmark:BookMark) : Observable<BookMark>{
-      return this.client.post<BookMark>(environment.apiUrl + "Ticket/BookMarkTicket", bookmark);
-    }
+    return this.client.post<BookMark>(environment.apiUrl + "Ticket/BookMarkTicket?ticketId=" + bookmark.ticketId + "&userId=" + bookmark.userId, null);
+  }
 }
