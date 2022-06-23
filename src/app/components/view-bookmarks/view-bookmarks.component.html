@@ -1,1 +1,19 @@
-<p>view-bookmarks works!</p>
+<div class="container-fluid">
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">BookMark ID</th>
+          <th scope="col">Ticket ID</th>
+          <th scope="col">User ID</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let bookmark of bookMarkArray">
+              <td>{{bookmark.bookMarkId}}</td>
+              <td>{{bookmark.ticketId}}</td>
+              <td>{{bookmark.userId}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
