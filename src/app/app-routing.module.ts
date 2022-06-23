@@ -14,7 +14,8 @@ const routes: Routes = [
   {path:"bookmark", component:BookmarkTicketComponent},
   {path:"resolve", component:ResolveTicketComponent},
   {path:"viewBookmark", component:ViewBookmarksComponent},
-  {path:"ticketDetails/:id",component:TicketDetailsComponent}
+  {path:"ticketDetails/:id",component:TicketDetailsComponent},
+  {path:"resolveTicket/:id",component:ResolveTicketComponent}
 ];
 
 @NgModule({

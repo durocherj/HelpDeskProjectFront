@@ -36,6 +36,13 @@ export class ApiService {
   }
 
   //Resolve and close ticket
+  ResolveAndCloseTicket(ticket:Ticket) : Observable<Ticket>{
+    return this.client.put<Ticket>(environment.apiUrl + 
+      "Ticket/ResolveAndCloseTicket?id=" + ticket.ticketId + 
+      "&resolution="+ ticket.resolution + 
+      "&resolvedBy="+ ticket.resolvedBy +
+      "&closed=true", null);
+  }
 
   //Bookmark ticket
   BookMarkTicket(bookmark:BookMark) : Observable<BookMark>{
@@ -49,3 +56,6 @@ export class ApiService {
     return bookmark;
   }
 }
+   
+}
+
