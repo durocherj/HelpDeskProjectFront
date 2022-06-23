@@ -1,1 +1,13 @@
-<p>bookmark-ticket works!</p>
+<div class="container-fluid">
+    <form #bookmarkTicketForm="ngForm"(ngSubmit)="submitForm(bookmarkTicketForm.form)">
+        <div class="form-group">
+          <label for="userId">My User ID:</label>
+          <input type="number" class="form-control" id="userId" name="userId" ngModel>
+
+          <label for="ticketId">Ticket ID:</label>
+          <input type="number" class="form-control" id="ticketId" name="ticketId" ngModel>
+          
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

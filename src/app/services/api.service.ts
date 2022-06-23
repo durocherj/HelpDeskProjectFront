@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { TicketDetailsComponent } from '../components/ticket-details/ticket-details.component';
+import { BookMark } from '../interfaces/bookmark';
 import { Ticket } from '../interfaces/ticket';
 
 @Injectable({
@@ -35,4 +36,7 @@ export class ApiService {
   //Resolve and close ticket
 
   //Bookmark ticket
+  BookMarkTicket(bookmark:BookMark) : Observable<BookMark>{
+      return this.client.post<BookMark>(environment.apiUrl + "Ticket/BookMarkTicket", bookmark);
+    }
 }
