@@ -28,6 +28,9 @@ export class ApiService {
   }
 
   //Create ticket
+  CreateTicket(ticket:Ticket) : Observable<Ticket>{
+    return this.client.post<Ticket>(environment.apiUrl + "Ticket/CreateTicket", ticket);
+  }
 
   //Resolve and close ticket
 

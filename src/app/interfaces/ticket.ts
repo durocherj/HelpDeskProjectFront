@@ -1,9 +1,9 @@
 export interface Ticket {
-    ticketId: number;
+    ticketId?: number;
     title: string;
     requestedBy:string;
     contents: string;
-    resolution: string;
-    resolvedBy:string;
+    resolution?: string;
+    resolvedBy?:string;
     closed: boolean;
 }

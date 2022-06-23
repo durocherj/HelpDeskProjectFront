@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { Ticket } from 'src/app/interfaces/ticket';
 
 @Component({
   selector: 'app-create-ticket',
@@ -12,5 +13,14 @@ export class CreateTicketComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+submitForm(form:any){
+  console.log(form);
+
+  this.service.CreateTicket({title: form.value["title"], requestedBy: form.value["requestedBy"], contents: form.value["contents"], closed:false})
+  .subscribe((data:Ticket) => console.log("Post Successful!"));
+  form.reset();
+}
 
 }
