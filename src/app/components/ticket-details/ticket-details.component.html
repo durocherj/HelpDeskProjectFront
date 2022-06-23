@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div *ngIf="ticket !== undefined">
+        <div *ngIf="ticket.closed === false">
+            <h1>Ticket {{ticket.ticketId}} submitted by {{ticket.requestedBy}}</h1>
+            <h3>{{ticket.title}} - Unresolved</h3>
+            <p>{{ticket.contents}}</p>
+        </div>
+        <div *ngIf="ticket.closed === true">
+            <h1>Ticket {{ticket.ticketId}} submitted by {{ticket.requestedBy}}</h1>
+            <h3>{{ticket.title}} - Resolved</h3>
+            <p>{{ticket.contents}}</p>
+            <p></p>
+            <h5>Resolved by {{ticket.resolvedBy}}</h5>
+            <p>{{ticket.resolution}}</p>
+        </div>
+        
+    </div>
+</div>

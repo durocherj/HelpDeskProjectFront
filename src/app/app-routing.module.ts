@@ -4,6 +4,7 @@ import { BookmarkTicketComponent } from './components/bookmark-ticket/bookmark-t
 import { CreateTicketComponent } from './components/create-ticket/create-ticket.component';
 import { MainComponent } from './components/main/main.component';
 import { ResolveTicketComponent } from './components/resolve-ticket/resolve-ticket.component';
+import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
 import { ViewBookmarksComponent } from './components/view-bookmarks/view-bookmarks.component';
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:"create", component:CreateTicketComponent},
   {path:"bookmark", component:BookmarkTicketComponent},
   {path:"resolve", component:ResolveTicketComponent},
-  {path:"viewBookmark", component:ViewBookmarksComponent}
+  {path:"viewBookmark", component:ViewBookmarksComponent},
+  {path:"ticketDetails/:id",component:TicketDetailsComponent}
 ];
 
 @NgModule({

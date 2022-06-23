@@ -1,1 +1,31 @@
-<p>main works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+        <div class="text-center">
+            <h1>Help Desk 9000</h1>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Ticket ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Requested By</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ticket of ticketArray">
+        <td>{{ticket.ticketId}}</td>
+        <td>{{ticket.title}}</td>
+        <td>{{ticket.requestedBy}}</td>
+        <td><a [routerLink]= "['/ticketDetails', ticket.ticketId]" class="btn btn-primary">Details</a></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  
