@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { UrlSerializer } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { TicketDetailsComponent } from '../components/ticket-details/ticket-details.component';
 import { BookMark } from '../interfaces/bookmark';
 import { Ticket } from '../interfaces/ticket';
+import { User } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +46,16 @@ export class ApiService {
 
   //Bookmark ticket
   BookMarkTicket(bookmark:BookMark) : Observable<BookMark>{
-    return this.client.post<BookMark>(environment.apiUrl + "Ticket/BookMarkTicket?ticketId=" + bookmark.ticketId + "&userId=" + bookmark.userId, null);
+      return this.client.post<BookMark>(environment.apiUrl + "Ticket/BookMarkTicket?ticketId=" + bookmark.ticketId + "&userId=" + bookmark.userId, null);
+    }
+
+  //Get all bookmarks
+  GetBookMarksById() : Observable<BookMark[]>{
+    let bookmark = this.client.get<BookMark[]>(environment.apiUrl + "BookMark/GetBookMarksById");
+
+    return bookmark;
   }
 }
+   
+}
+
