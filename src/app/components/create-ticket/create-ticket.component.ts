@@ -18,7 +18,8 @@ export class CreateTicketComponent implements OnInit {
 submitForm(form:any){
   console.log(form);
 
-  this.service.CreateTicket({title: form.value["title"], requestedBy: form.value["requestedBy"], contents: form.value["contents"], closed:false});
+  this.service.CreateTicket({title: form.value["title"], requestedBy: form.value["requestedBy"], contents: form.value["contents"], closed:false})
+  .subscribe((data:Ticket) => console.log("Post Successful!"));
   form.reset();
 }
 
