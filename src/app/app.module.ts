@@ -9,6 +9,7 @@ import { ResolveTicketComponent } from './components/resolve-ticket/resolve-tick
 import { BookmarkTicketComponent } from './components/bookmark-ticket/bookmark-ticket.component';
 import { ViewBookmarksComponent } from './components/view-bookmarks/view-bookmarks.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     ResolveTicketComponent,
     BookmarkTicketComponent,
     ViewBookmarksComponent,
+    TicketDetailsComponent,
   ],
   imports: [
     BrowserModule,

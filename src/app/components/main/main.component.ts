@@ -14,11 +14,11 @@ export class MainComponent implements OnInit {
   ticketArray:Ticket[] = [];
 
   ngOnInit(): void {
-    this.GetAllTicketsOderedById();
+    this.GetAllTicketsOrderedById();
   }
 
-  GetAllTicketsOderedById(){
-    this.service.GetAllTicketsOderedById().subscribe((data:Ticket[]) => this.ticketArray = data);
+  GetAllTicketsOrderedById(){
+    this.service.GetAllTicketsOrderedById().subscribe((data:Ticket[]) => this.ticketArray = data);
   }
 
 }
