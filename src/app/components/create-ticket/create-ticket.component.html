@@ -1,1 +1,15 @@
-<p>create-ticket works!</p>
+<div class="container-fluid">
+    <form #createTicketForm="ngForm"(ngSubmit)="submitForm(createTicketForm.form)">
+        <div class="form-group">
+          <label for="title">Brief Description</label>
+          <input type="text" class="form-control" id="title" name="title">
+
+          <label for="requestedBy">Name or Email</label>
+          <input type="text" class="form-control" id="requestedBy" name="requestedBy">
+          
+          <label for="contents">Please briefly describe your issue.</label>
+          <input type="text" class="form-control" id="contents" name="contents">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

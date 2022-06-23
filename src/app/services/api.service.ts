@@ -28,6 +28,9 @@ export class ApiService {
   }
 
   //Create ticket
+  CreateTicket(ticket:Ticket){
+    this.client.post(environment.apiUrl + "Ticket/CreateTicket", ticket);
+  }
 
   //Resolve and close ticket
 

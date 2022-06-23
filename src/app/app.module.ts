@@ -10,6 +10,7 @@ import { BookmarkTicketComponent } from './components/bookmark-ticket/bookmark-t
 import { ViewBookmarksComponent } from './components/view-bookmarks/view-bookmarks.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TicketDetailsComponent } from './components/ticket-details/ticket-detai
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
