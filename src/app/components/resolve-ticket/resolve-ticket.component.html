@@ -1,1 +1,25 @@
-<p>resolve-ticket works!</p>
+<!-- <div class="container-fluid">
+    <p>resolve ticket screen</p>
+    <div *ngIf="ticket !== undefined">
+        <div *ngIf="ticket.closed === false">
+            <h1>Ticket {{ticket.ticketId}} submitted by {{ticket.requestedBy}}</h1>
+            <h3>{{ticket.title}} - Unresolved</h3>
+            <p>{{ticket.contents}}</p>
+        </div>
+    </div>
+</div> -->
+<div class="container-fluid">
+    <div *ngIf="ticket !== undefined">
+        <form #resolveTicketForm="ngForm"(ngSubmit)="submitForm(resolveTicketForm.form)">
+            <p>Current Ticket ID: {{ticket.ticketId}}</p>
+            <div class="form-group">
+                <label for="resolvedBy">My Name:</label>
+                <input type="text" class="form-control" id="resolvedBy" name="resolvedBy" ngModel>
+
+                <label for="resolution">Resolution:</label>
+                <input type="text" class="form-control" id="resolution" name="resolution" ngModel>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+</div>

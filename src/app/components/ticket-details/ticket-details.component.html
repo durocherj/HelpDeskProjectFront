@@ -4,6 +4,7 @@
             <h1>Ticket {{ticket.ticketId}} submitted by {{ticket.requestedBy}}</h1>
             <h3>{{ticket.title}} - Unresolved</h3>
             <p>{{ticket.contents}}</p>
+            <p><a [routerLink]= "['/resolveTicket', ticket.ticketId]" class="btn btn-primary">Resolve Ticket</a></p>
         </div>
         <div *ngIf="ticket.closed === true">
             <h1>Ticket {{ticket.ticketId}} submitted by {{ticket.requestedBy}}</h1>
